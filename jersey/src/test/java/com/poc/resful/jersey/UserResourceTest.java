@@ -1,17 +1,11 @@
 package com.poc.resful.jersey;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.withSettings;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 
 import com.poc.resful.jersey.entities.User;
 
@@ -32,7 +26,7 @@ class UserResourceTest extends JerseyTest {
 
 
 	 
-	 User user = new User(3l, "name", "role", "password");
+	 User user = new User(9l, "name", "role", "password");
 	 
 	 @Test
 	 public void testCreate() {

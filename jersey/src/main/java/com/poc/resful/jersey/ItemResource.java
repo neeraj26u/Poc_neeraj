@@ -4,6 +4,7 @@ import com.poc.resful.jersey.entities.Item;
 import com.poc.resful.jersey.namebinder.IteamIdAndNameBinder;
 import com.poc.resful.jersey.namebinder.IteamPriceBinder;
 import com.poc.resful.jersey.namebinder.ItemDiscriptionBinder;
+import com.poc.resful.jersey.namebinder.ItemIdVaidatorBinder;
 import com.poc.resful.jersey.namebinder.UniqueItemId;
 import com.poc.resful.jersey.services.ItemService;
 
@@ -34,6 +35,7 @@ public class ItemResource {
 	@ItemDiscriptionBinder
 	@IteamPriceBinder
 	@IteamIdAndNameBinder
+	@ItemIdVaidatorBinder
 	@Path("/create")
     public Response addItem(@Valid @UniqueItemId Item item) {       
 		itemService.addItem(item);

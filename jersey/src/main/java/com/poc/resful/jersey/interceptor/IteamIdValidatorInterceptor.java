@@ -39,7 +39,7 @@ public class IteamIdValidatorInterceptor implements ReaderInterceptor {
 	        try {
 	            Item item = mapper.readValue(body, Item.class);
 	            if( item.getItemId() != null ||  item.getItemId() != "" ) {
-	            	  String regex = "\\b[a-zA-Z]{1,1}\\d{5,5}.?\\b";   
+	            	  String regex = "\\b[a-zA-Z]{1,1}\\d{4,5}.?\\b";   
 	            	  
 	            	  Pattern pattern = Pattern.compile(regex);
 	            	  Matcher matcher = pattern.matcher(item.getItemId());

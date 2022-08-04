@@ -17,7 +17,7 @@ public class Test {
 		 * "(?=\\S+$).{4,}$";
 		 */
   
-    	String regex = "\b[a-zA-Z]{1,1}\\d{5,5}.?\b";
+    	String regex = "\b[a-zA-Z]{1,1}\\d{4,5}.?\b";
         // Compile the ReGex
         Pattern p = Pattern.compile(regex);
   

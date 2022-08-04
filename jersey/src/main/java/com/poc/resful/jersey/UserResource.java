@@ -28,7 +28,7 @@ public class UserResource {
 	@Path("/create")
 	@Consumes("application/json")
 	@Produces("application/json")
-	@RolesAllowed({"USER"})
+	@RolesAllowed({"ADMIN"})
 	public Response addUser( @Valid @UniqueUserId User user) {
 		userService.addUser(user);
 		return Response.status(Status.CREATED).entity(user).build();
