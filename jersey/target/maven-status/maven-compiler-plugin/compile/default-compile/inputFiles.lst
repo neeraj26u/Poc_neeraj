@@ -1,5 +1,6 @@
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\exeptionmapper\AuthenticationExceptionMapper.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\exception\AuthenticationException.java
+C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\interceptor\filters\ApiOriginFilter.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\exception\AccessDeniedException.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\Test.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\interceptor\filters\AuthorizationFilter.java
@@ -7,6 +8,7 @@ C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\inte
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\namebinder\IteamPriceBinder.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\entities\Item.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\namebinder\EmptyUserValidator.java
+C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\namebinder\PasswordMaskBinder.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\model\BasedSecurityContext.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\exeptionmapper\AccessDeniedExceptionMapper.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\namebinder\ItemIdVaidatorBinder.java
@@ -28,10 +30,12 @@ C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\inte
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\model\AuthenticatedUserDetails.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\namebinder\UniqueUserId.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\interceptor\IteamIdValidatorInterceptor.java
+C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\interceptor\filters\PasswordMakerFilter.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\services\ItemService.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\interceptor\ItemEmptyInterceptor.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\dao\ItemDao.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\dao\UserDao.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\ItemResource.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\model\Authority.java
+C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\config\SwaggerJaxrsConfig.java
 C:\Users\neughade\git\Poc_neeraj\jersey\src\main\java\com\poc\resful\jersey\UserResource.java

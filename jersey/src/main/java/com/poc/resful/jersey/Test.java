@@ -10,6 +10,8 @@ public class Test {
     public static boolean
     isValidPassword(String password)
     {
+    	String s1 = "neeraj@1234";
+    	System.out.println(s1.replaceAll("\\w(?=\\w{0,})|\\W(?=\\W{0,})", "*"));
   
         // Regex to check valid password.
 		/*
@@ -17,7 +19,7 @@ public class Test {
 		 * "(?=\\S+$).{4,}$";
 		 */
   
-    	String regex = "\b[a-zA-Z]{1,1}\\d{4,5}.?\b";
+    	String regex = "\\b[a-zA-Z]{1,1}\\d{4}.\\b";
         // Compile the ReGex
         Pattern p = Pattern.compile(regex);
   
@@ -42,15 +44,15 @@ public class Test {
     {
   
         // Test Case 1:
-        String str1 = "A12345";
+        String str1 = "A123456";
         System.out.println(isValidPassword(str1));
   
         // Test Case 2:
-        String str2 = "Aer234";
+        String str2 = "234233";
         System.out.println(isValidPassword(str2));
   
         // Test Case 3:
-        String str3 = "A1234567";
+        String str3 = "11111A";
         System.out.println(isValidPassword(str3));
   
         // Test Case 4:

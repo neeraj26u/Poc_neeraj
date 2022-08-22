@@ -3,6 +3,7 @@ package com.poc.resful.jersey;
 
 
 import com.poc.resful.jersey.entities.User;
+import com.poc.resful.jersey.namebinder.PasswordMaskBinder;
 import com.poc.resful.jersey.namebinder.UniqueUserId;
 import com.poc.resful.jersey.services.UserService;
 
@@ -21,13 +22,13 @@ import jakarta.ws.rs.core.Response.Status;
 @Path("myresource")
 public class UserResource {
 	
-
 	private UserService userService = new UserService();
 	
 	@POST
 	@Path("/create")
 	@Consumes("application/json")
 	@Produces("application/json")
+	@PasswordMaskBinder
 	@RolesAllowed({"ADMIN"})
 	public Response addUser( @Valid @UniqueUserId User user) {
 		userService.addUser(user);

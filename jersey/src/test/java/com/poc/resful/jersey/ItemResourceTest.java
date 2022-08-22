@@ -17,11 +17,12 @@ import jakarta.ws.rs.core.Response;
 class ItemResourceTest extends JerseyTest {
 	
 	
-	@Override
+	 @Override
 	 public Application configure() {
-	  enable(TestProperties.LOG_TRAFFIC);
-	  enable(TestProperties.DUMP_ENTITY);
-	  return new ResourceConfig(ItemResource.class);
+	   enable(TestProperties.LOG_TRAFFIC);
+	   enable(TestProperties.DUMP_ENTITY);
+	 return new ResourceConfig(ItemResource.class);
+	  
 	 }
 
 
@@ -31,10 +32,42 @@ class ItemResourceTest extends JerseyTest {
 	 @Test
 	 public void testCreate() {
 	 
+	    Response output = target("/item-resource/create").request().post(Entity.entity(item, MediaType.APPLICATION_JSON));
+	    System.out.println(output.getStatus());
+	    assertEquals("Should return status 201", 201, output.getStatus());
+	 }
+
+		/*
+		 * @Test public void testGlobalPostMatchingNotInvokedOn404() { Response r =
+		 * target("basic").path("not-found").request().get(); assertEquals(404,
+		 * r.getStatus()); if (r.hasEntity()) { //assertThat(r.readEntity(String.class),
+		 * not(containsString("postMatching"))); } }
+		 */
+	 
+	 @Test
+	 public void testCreateForPrice() {
+		 
+	     Response output = target("/item-resource/create").request().post(Entity.entity(item, MediaType.APPLICATION_JSON));
+	     System.out.println(output.getStatus());
+	     assertEquals("Should return status 201", 201, output.getStatus());
+	 }
+
+	 
+	 @Test
+	 public void testCreateForDescription() {	 
+		 
+	    Response output = target("/item-resource/create").request().post(Entity.entity(item, MediaType.APPLICATION_JSON));
+	    System.out.println(output.getStatus());
+	    assertEquals("Should return status 201", 201, output.getStatus());
+	 }
+	 
+	 @Test
+	 public void testCreateForItemId() {
+		 
 	  Response output = target("/item-resource/create").request().post(Entity.entity(item, MediaType.APPLICATION_JSON));
 	  System.out.println(output.getStatus());
 	  assertEquals("Should return status 201", 201, output.getStatus());
+	 
 	 }
-
 
 }

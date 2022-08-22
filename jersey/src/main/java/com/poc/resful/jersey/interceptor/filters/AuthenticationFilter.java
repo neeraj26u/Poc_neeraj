@@ -1,6 +1,7 @@
 package com.poc.resful.jersey.interceptor.filters;
 
 import java.io.IOException;
+import java.util.Base64;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -25,7 +26,7 @@ import jakarta.ws.rs.core.SecurityContext;
 import jakarta.ws.rs.ext.Provider;
 
 
-@Provider
+//@Provider
 @Priority(Priorities.AUTHENTICATION)
 public class AuthenticationFilter implements ContainerRequestFilter {
 
@@ -53,9 +54,10 @@ public class AuthenticationFilter implements ContainerRequestFilter {
                      .entity("Access blocked for all users !!").build());
             return;
         }
+       
            
         //Decode username and password
-        String usernameAndPassword = encodedUserPassword;
+        String usernameAndPassword =  new String(Base64.getDecoder().decode(encodedUserPassword.getBytes()));;
 
         //Split username and password tokens
         final StringTokenizer tokenizer = new StringTokenizer(usernameAndPassword, ":");
