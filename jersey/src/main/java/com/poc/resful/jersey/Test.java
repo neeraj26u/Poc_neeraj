@@ -1,14 +1,18 @@
 package com.poc.resful.jersey;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Test {
+	
 
-
+        
     // Function to validate the password.
-    public static boolean
-    isValidPassword(String password)
+    public static boolean isValidPassword(String password)
     {
     	String s1 = "neeraj@1234";
     	System.out.println(s1.replaceAll("\\w(?=\\w{0,})|\\W(?=\\W{0,})", "*"));
@@ -43,6 +47,19 @@ public class Test {
     public static void main(String args[])
     {
   
+    	
+   	 Date d=new  java.util.Date();
+     LocalDate businessDay = d.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        ZoneId defaultZoneId = ZoneId.systemDefault();
+        int addedDays = 0;
+        while (addedDays < 10) {
+            businessDay = businessDay.plusDays(1);
+            if (!(businessDay.getDayOfWeek() == DayOfWeek.SATURDAY || businessDay.getDayOfWeek() == DayOfWeek.SUNDAY)) {
+                ++addedDays;
+            }
+        }
+        System.out.println(Date.from(businessDay.atStartOfDay(defaultZoneId).toInstant()));
+        
         // Test Case 1:
         String str1 = "A123456";
         System.out.println(isValidPassword(str1));

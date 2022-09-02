@@ -25,7 +25,7 @@ public class Item {
 	private String description;
 	
 	@Column(name = "price")
-	private Double price;
+	private Float price;
 	
 	
 
@@ -35,7 +35,7 @@ public class Item {
 
 
 
-	public Item(String itemId, String name, String description, Double price) {
+	public Item(String itemId, String name, String description, Float price) {
 		super();
 		this.itemId = itemId;
 		this.name = name;
@@ -81,13 +81,13 @@ public class Item {
 
 
 
-	public Double getPrice() {
+	public Float getPrice() {
 		return price;
 	}
 
 
 
-	public void setPrice(Double price) {
+	public void setPrice(Float price) {
 		this.price = price;
 	}
 

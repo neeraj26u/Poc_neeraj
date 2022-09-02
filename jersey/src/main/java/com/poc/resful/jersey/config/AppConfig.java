@@ -29,5 +29,8 @@ public class AppConfig extends ResourceConfig {
         register(AuthenticationExceptionMapper.class);
         register(ApiOriginFilter.class);
         
+        
+        
+        
 	}
 }

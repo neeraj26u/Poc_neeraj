@@ -16,7 +16,7 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.ext.Provider;
 
 
-//@Provider
+@Provider
 @Priority(Priorities.AUTHORIZATION)
 public class AuthorizationFilter implements ContainerRequestFilter {
 

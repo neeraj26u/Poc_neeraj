@@ -26,15 +26,6 @@ class UserResourceTest extends JerseyTest {
 
 
 	 
-	 User user = new User(9l, "name", "role", "password");
-	 
-	 @Test
-	 public void testCreate() {
-	 
-	  Response output = target("/myresource/create").request().post(Entity.entity(user, MediaType.APPLICATION_JSON));
-	  System.out.println(output.getStatus());
-	  assertEquals("Should return status 201", 201, output.getStatus());
-	 }
-
+	
 
 }

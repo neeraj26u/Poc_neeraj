@@ -1,0 +1,113 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="neughade (generated)" id="1661510952008-1">
+        <createTable tableName="ITEM_DETAIL">
+            <column name="ITEM_ID" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_E"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PRICE" type="REAL"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661510952008-2">
+        <createTable tableName="LIQUI_DETAIL">
+            <column name="USER_ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_F"/>
+            </column>
+            <column name="NAMEE" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="BIGINT"/>
+            <column name="ROLEE" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661510952008-3">
+        <createTable tableName="USER_DETAIL">
+            <column name="USER_ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_F9"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="VARCHAR(255)"/>
+            <column name="ROLE" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661519631844-1">
+        <createTable tableName="ITEM_DETAIL">
+            <column name="ITEM_ID" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_E"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PRICE" type="REAL"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661519631844-2">
+        <createTable tableName="ITEM_VALUE">
+            <column name="ITEM_ID" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ITEM_VALUE"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PRICE" type="REAL"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661519631844-3">
+        <createTable tableName="LIQUI_DETAIL">
+            <column name="USER_ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_F"/>
+            </column>
+            <column name="NAMEE" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="BIGINT"/>
+            <column name="ROLEE" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661519631844-4">
+        <createTable tableName="USER_DETAIL">
+            <column name="USER_ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_F9"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="VARCHAR(255)"/>
+            <column name="ROLE" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661519651920-1">
+        <createTable tableName="ITEM_DETAIL">
+            <column name="ITEM_ID" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_E"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PRICE" type="REAL"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661519651920-2">
+        <createTable tableName="ITEM_VALUE">
+            <column name="ITEM_ID" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ITEM_VALUE"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PRICE" type="REAL"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661519651920-3">
+        <createTable tableName="LIQUI_DETAIL">
+            <column name="USER_ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_F"/>
+            </column>
+            <column name="NAMEE" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="BIGINT"/>
+            <column name="ROLEE" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="neughade (generated)" id="1661519651920-4">
+        <createTable tableName="USER_DETAIL">
+            <column name="USER_ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_F9"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="VARCHAR(255)"/>
+            <column name="ROLE" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

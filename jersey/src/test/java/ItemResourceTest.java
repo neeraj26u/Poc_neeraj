@@ -7,6 +7,7 @@ import org.glassfish.jersey.test.JerseyTest;
 import org.glassfish.jersey.test.TestProperties;
 import org.junit.jupiter.api.Test;
 
+import com.poc.resful.jersey.ItemResource;
 import com.poc.resful.jersey.entities.Item;
 
 import jakarta.ws.rs.client.Entity;
@@ -28,13 +29,7 @@ class ItemResourceTest extends JerseyTest {
 	 
 	 Item item = new Item("p12345", "Laptop", "Item type is laptop", 100d);
 	 
-	 @Test
-	 public void testCreate() {
-	 
-	  Response output = target("/item-resource/create").request().post(Entity.entity(item, MediaType.APPLICATION_JSON));
-	  System.out.println(output.getStatus());
-	  assertEquals("Should return status 201", 201, output.getStatus());
-	 }
+	
 
 
 }
